@@ -7,12 +7,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 const fixedSysExcelsior = localFont({
   src: "../fonts/Fixedsys-Excelsior-Regular.woff",
+  variable: "--font-fixedsys-excelsior",
 });
 const modalzShort = localFont({
   src: "../fonts/modalz-short.woff2",
+  variable: "--font-modalz-short",
 });
 const modalzTall = localFont({
   src: "../fonts/modalz-tall.woff2",
+  variable: "--font-modalz-tall",
 });
 
 export const metadata: Metadata = {
@@ -26,8 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={modalzShort.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

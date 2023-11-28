@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['var(--font-modalz-short), var(--font-fixedsys-excelsior)'],
+        "heading-tall": ['var(--font-modalz-tall)'],
+        body: ['var(--font-fixedsys-excelsior)'],
+      },
       colors: {
         "darkest-blue": "#002B36",
         "dark-blue": "#073642",
