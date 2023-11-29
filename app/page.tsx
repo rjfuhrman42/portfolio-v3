@@ -1,10 +1,13 @@
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-darkest-blue">
       <div className="max-w-xl py-16 flex flex-col items-center justify-center">
-        <div className="w-full px-4 lg:px-0">
+        <Navbar />
+        {/* ------------------ Hero Section ------------------ */}
+        <div className="w-full px-4 py-16 lg:px-0">
           <div className="pb-11">
             <h1 className="text-accent-green">Hi, I&apos;m Reid.</h1>
             <h1 className="">A Software engineer based in new york.</h1>
