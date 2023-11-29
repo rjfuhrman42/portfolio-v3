@@ -24,7 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  @apply text-light-gray;
+  @apply text-lighter-gray;
 }
 
 h1 {
@@ -34,4 +34,5 @@ h1 {
 
 p {
   font-family: var(--font-fixedsys-excelsior);
+  @apply text-base xl:text-lg;
 }
