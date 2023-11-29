@@ -24,4 +24,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  @apply text-lighter-gray;
+}
+
+h1 {
+  font-family: var(--font-modalz-short);
+  @apply text-4xl;
+}
+
+p {
+  font-family: var(--font-fixedsys-excelsior);
+  @apply text-base xl:text-lg;
 }
