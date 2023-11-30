@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable}`}
+      className={`${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable} scroll-smooth`}
     >
       <body>{children}</body>
     </html>
