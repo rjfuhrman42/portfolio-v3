@@ -7,24 +7,24 @@ export default function Home() {
     {
       company: "Township",
       title: "Software Engineer",
-      startDate: "2022",
-      endDate: "2023",
+      startDate: "Apr. 2022",
+      endDate: "Nov. 2023",
       description:
-        "Bringing web engineering fire-power to where it's needed in the company, from growth to product.",
+        "Hired on as a Junior Engineer and grew into a mid-level engineer role. Worked largely on React Native Bluetooth apps for iOS and Android, with some interlude into building client marketing sites with Next.js.",
     },
     {
       company: "USAF, 402nd Software Engineering Squadron",
       title: "Computer Scientist",
-      startDate: "2020",
-      endDate: "2022",
+      startDate: "May 2020",
+      endDate: "Mar. 2022",
       description:
-        "Bringing web engineering fire-power to where it's needed in the company, from growth to product.",
+        "Part of the independent verification and validation team. Worked with a team of 5 to test internal applications and websites. Recommended changes and fixes.",
     },
   ];
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-darkest-blue">
-      <div className="max-w-xl py-8 md:py-16 px-4 lg:px-0 flex flex-col items-center justify-center">
+      <div className="max-w-2xl py-8 md:py-16 px-6 lg:px-0 flex flex-col items-center justify-center">
         <Navbar />
         {/* ------------------ Hero Section ------------------ */}
         <div className="w-full pt-16 pb-12">
@@ -67,18 +67,13 @@ export default function Home() {
             })}
           </div>
           <Link
-            href={"/resume"}
+            href={"/Reid_Fuhrman_Resume_2023.pdf"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-heading-tall text-lg text-accent-yellow hover:text-accent-orange"
           >
             Looking for my resume? Click here.
           </Link>
-          {/* <Link
-            href={"/resume"}
-            className="block font-heading-tall text-lg text-accent-yellow hover:text-accent-orange md:hidden"
-          >
-            Looking for my resume? Click here.
-            <p className="text-center font-heading-tall w-full py-2">&uarr;</p>
-          </Link> */}
         </div>
       </div>
     </main>
