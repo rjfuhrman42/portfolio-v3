@@ -36,3 +36,7 @@ p {
   font-family: var(--font-fixedsys-excelsior);
   @apply text-base xl:text-lg;
 }
+
+a {
+  @apply font-heading;
+}
