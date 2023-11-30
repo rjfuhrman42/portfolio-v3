@@ -15,7 +15,7 @@ const navItems: NavItem[] = [
 
 const Navbar = () => {
   return (
-    <div className="relative w-full flex justify-end items-center gap-8">
+    <div className="relative w-full flex justify-end items-center gap-2.5 xs:gap-4 md:gap-8">
       <Link href="/" className="absolute left-0 py-4">
         RF
       </Link>
