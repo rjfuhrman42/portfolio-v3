@@ -8,7 +8,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: "/resume", label: "Resume", color: "text-accent-pink" },
+  { href: "/#work", label: "Work", color: "text-accent-pink" },
   { href: "/#projects", label: "Projects", color: "text-accent-blue" },
   { href: "/#contact", label: "Contact", color: "text-accent-yellow" },
 ];
