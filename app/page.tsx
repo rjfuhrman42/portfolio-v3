@@ -1,5 +1,6 @@
 import JobEntry from "@/components/JobEntry";
 import Navbar from "@/components/Navbar";
+import ProjectEntry from "@/components/ProjectEntry";
 import Link from "next/link";
 
 export default function Home() {
@@ -19,6 +20,32 @@ export default function Home() {
       endDate: "Mar. 2022",
       description:
         "Part of the independent verification and validation team. Worked with a team of 5 to test internal applications and websites. Recommended changes and fixes.",
+    },
+  ];
+
+  const projectEntries = [
+    {
+      title: "React Games List",
+      description: "Think Letterboxd for video games.",
+      image: "/react-games-list.png",
+      accentColor: "bg-tan",
+      url: "https://react-games-list.web.app/",
+    },
+    {
+      title: "FreeCodeCamp Nashville Website",
+      description:
+        "The FreeCodeCamp Nashville meetup group site. A hub for events and would-be members.",
+      image: "/fcc_secondary_small.png",
+      accentColor: "bg-accent-yellow",
+      url: "https://www.nashvillefcc.com/",
+    },
+    {
+      title: "Danganronpa 2 Fan Card Game",
+      description:
+        "A fun themed pick-up card game based on the Danganronpa 2 visual novel.",
+      image: "/mini-mono.png",
+      accentColor: "bg-accent-pink",
+      url: "https://dangan2-memory-game.web.app/",
     },
   ];
 
@@ -52,7 +79,7 @@ export default function Home() {
         {/* ------------------ Work Section ------------------ */}
         <div className="w-full py-16" id="work">
           <h2 className="text-accent-red">Where I&apos;ve worked</h2>
-          <div className="pt-6 pb-12">
+          <div className="pt-12 py-16">
             {jobEntries.map((entry) => {
               return (
                 <JobEntry
@@ -70,10 +97,28 @@ export default function Home() {
             href={"/Reid_Fuhrman_Resume_2023.pdf"}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-heading-tall text-lg text-accent-yellow hover:text-accent-orange"
+            className="text-center w-full block sm:text-right font-heading-tall text-accent-yellow hover:text-accent-orange"
           >
             Looking for my resume? Click here.
           </Link>
+        </div>
+        {/* ------------------ Projects Section ------------------ */}
+        <div className="w-full py-16" id="projects">
+          <h2 className="text-accent-blue w-48">Some Personal Projects</h2>
+          <div className="flex flex-col gap-y-12 py-12">
+            {projectEntries.map((entry) => {
+              return (
+                <ProjectEntry
+                  key={entry.title}
+                  title={entry.title}
+                  description={entry.description}
+                  image={entry.image}
+                  accentColor={entry?.accentColor}
+                  url={entry.url}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </main>

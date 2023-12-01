@@ -10,7 +10,7 @@ type Props = {
 
 function JobEntry({ company, title, startDate, endDate, description }: Props) {
   return (
-    <div className="flex flex-row py-8 w-full">
+    <div className="flex flex-row py-4 w-full">
       <div className="w-1/3">
         <p>
           {startDate} - {endDate}
