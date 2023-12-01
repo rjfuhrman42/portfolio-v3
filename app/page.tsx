@@ -26,18 +26,26 @@ export default function Home() {
   const projectEntries = [
     {
       title: "React Games List",
-      description:
-        "Bringing web engineering fire-power to where it's needed in the company, from growth to product.",
+      description: "Think Letterboxd for video games.",
+      image: "/react-games-list.png",
+      accentColor: "bg-tan",
+      url: "https://react-games-list.web.app/",
     },
     {
       title: "FreeCodeCamp Nashville Website",
       description:
-        "Bringing web engineering fire-power to where it's needed in the company, from growth to product.",
+        "The FreeCodeCamp Nashville meetup group site. A hub for events and would-be members.",
+      image: "/fcc_secondary_small.png",
+      accentColor: "bg-accent-yellow",
+      url: "https://www.nashvillefcc.com/",
     },
     {
       title: "Danganronpa 2 Fan Card Game",
       description:
-        "Bringing web engineering fire-power to where it's needed in the company, from growth to product.",
+        "A fun themed pick-up card game based on the Danganronpa 2 visual novel.",
+      image: "/mini-mono.png",
+      accentColor: "bg-accent-pink",
+      url: "https://dangan2-memory-game.web.app/",
     },
   ];
 
@@ -104,7 +112,9 @@ export default function Home() {
                   key={entry.title}
                   title={entry.title}
                   description={entry.description}
-                  image="/images/placeholder.png"
+                  image={entry.image}
+                  accentColor={entry?.accentColor}
+                  url={entry.url}
                 />
               );
             })}
