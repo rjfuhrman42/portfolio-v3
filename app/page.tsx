@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import JobEntry from "@/components/JobEntry";
 import Navbar from "@/components/Navbar";
 import ProjectEntry from "@/components/ProjectEntry";
@@ -51,8 +52,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-darkest-blue">
-      <div className="max-w-2xl py-8 md:py-16 px-6 lg:px-0 flex flex-col items-center justify-center">
+      <div className="max-w-2xl pt-8 md:pt-16 pb-4 px-4 xs:px-6 lg:px-0 flex flex-col items-center justify-center">
         <Navbar />
+
         {/* ------------------ Hero Section ------------------ */}
         <div className="w-full pt-16 pb-12">
           <div className="pb-11">
@@ -76,6 +78,7 @@ export default function Home() {
             the (terrifying(fun)) streets of NYC.
           </p>
         </div>
+
         {/* ------------------ Work Section ------------------ */}
         <div className="w-full py-16" id="work">
           <h2 className="text-accent-red">Where I&apos;ve worked</h2>
@@ -102,6 +105,7 @@ export default function Home() {
             Looking for my resume? Click here.
           </Link>
         </div>
+
         {/* ------------------ Projects Section ------------------ */}
         <div className="w-full py-16" id="projects">
           <h2 className="text-accent-blue w-48">Some Personal Projects</h2>
@@ -119,6 +123,11 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+
+        {/* ------------------ Footer ------------------ */}
+        <div id="contact" className="w-full">
+          <Footer />
         </div>
       </div>
     </main>
