@@ -57,9 +57,13 @@ export default function Home() {
 
         {/* ------------------ Hero Section ------------------ */}
         <div className="w-full pt-16 pb-12">
-          <div className="pb-11">
-            <h1 className="text-accent-green">Hi, I&apos;m Reid.</h1>
-            <h1>A Software engineer based in new york.</h1>
+          <div className="pb-11 xs:w-3/4">
+            <h1 className="text-accent-green md:text-5xl">
+              Hi, I&apos;m Reid.
+            </h1>
+            <h1 className="md:text-5xl">
+              A Software engineer based in New York.
+            </h1>
           </div>
           <p>
             I’m Reid Fuhrman, a software engineer based in Brooklyn, New York.

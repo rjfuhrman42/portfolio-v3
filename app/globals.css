@@ -27,16 +27,15 @@ body {
   @apply text-lighter-gray;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: var(--font-modalz-short);
+  @apply font-heading;
 }
 
 h1 {
-  @apply text-4xl;
+  @apply text-4xl font-body;
 }
 
 h2 {
