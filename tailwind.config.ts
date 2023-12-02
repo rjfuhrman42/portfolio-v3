@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['var(--font-modalz-short), var(--font-fixedsys-excelsior)'],
+        heading: ['var(--font-modalz-short)'],
         "heading-tall": ['var(--font-modalz-tall)'],
         body: ['var(--font-fixedsys-excelsior)'],
       },
