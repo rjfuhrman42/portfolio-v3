@@ -31,9 +31,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable} scroll-smooth`}
+      className={`${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable} scroll-smooth h-full`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <div className="noise"></div>
+      </body>
     </html>
   );
 }

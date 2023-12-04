@@ -17,14 +17,10 @@
 }
 
 body {
+  position: relative;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  @apply text-lighter-gray;
+  z-index: 1;
+  @apply text-lighter-gray bg-darkest-blue;
 }
 
 h2,
@@ -49,4 +45,15 @@ p {
 
 a {
   @apply font-heading;
+}
+
+.noise {
+  background-image: url("/noise.svg");
+  background-repeat: repeat;
+  background-size: 750px;
+  inset: 0;
+  opacity: 0.075;
+  position: absolute;
+  z-index: -1;
+  top: 0;
 }
