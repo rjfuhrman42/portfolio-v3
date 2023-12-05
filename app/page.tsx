@@ -3,27 +3,9 @@ import JobEntry from "@/components/JobEntry";
 import Navbar from "@/components/Navbar";
 import ProjectEntry from "@/components/ProjectEntry";
 import Link from "next/link";
+import { jobEntries } from "@/data/jobEntries";
 
 export default function Home() {
-  const jobEntries = [
-    {
-      company: "Township",
-      title: "Software Engineer",
-      startDate: "Apr. 2022",
-      endDate: "Nov. 2023",
-      description:
-        "Hired on as a Junior Engineer and grew into a mid-level engineer role. Worked largely on React Native Bluetooth apps for iOS and Android, with some interlude into building client marketing sites with Next.js.",
-    },
-    {
-      company: "USAF, 402nd Software Engineering Squadron",
-      title: "Computer Scientist",
-      startDate: "May 2020",
-      endDate: "Mar. 2022",
-      description:
-        "Part of the independent verification and validation team. Worked with a team of 5 to test internal applications and websites. Recommended changes and fixes.",
-    },
-  ];
-
   const projectEntries = [
     {
       title: "React Games List",
@@ -62,7 +44,7 @@ export default function Home() {
               Hi, I&apos;m Reid.
             </h1>
             <h1 className="md:text-5xl">
-              A Software engineer based in New York.
+              A Software Engineer based in New York.
             </h1>
           </div>
           <p>
