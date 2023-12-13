@@ -16,8 +16,14 @@ const navItems: NavItem[] = [
 const Navbar = () => {
   return (
     <div className="relative w-full flex justify-end items-center sm:gap-x-1">
-      <Link href="/" className="absolute left-0 py-4 pr-2">
-        RF
+      <Link
+        href="/"
+        className="grid grid-cols-2 absolute left-0 py-4 pr-2 home-button"
+      >
+        <div className="bg-accent-green home-square"></div>
+        <div className="bg-accent-teal home-square"></div>
+        <div className="bg-accent-pink home-square"></div>
+        <div className="bg-accent-yellow home-square"></div>
       </Link>
       {navItems.map((item) => {
         return (
