@@ -57,3 +57,9 @@ a {
   z-index: -1;
   top: 0;
 }
+
+.bubbles {
+  position: absolute;
+  opacity: 0;
+  @apply border border-lighter-gray w-2 h-2 top-5;
+}
