@@ -58,34 +58,8 @@ a {
   top: 0;
 }
 
-.home-square {
-  @apply h-2 w-2;
-}
-
-.home-button:hover {
-  animation: rotation 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-  animation-fill-mode: backwards;
-}
-
-.home-button {
-  transform-origin: left;
-  @apply bg-white;
-}
-
-@keyframes rotation {
-  0% {
-    transform-origin: center;
-    transform: rotate(0deg);
-    gap: 0rem;
-  }
-  50% {
-    gap: 1rem;
-  }
-  100% {
-    transform-origin: left;
-    transform: rotate(360deg);
-    gap: 0rem;
-  }
+.bubbles {
+  position: absolute;
+  opacity: 0;
+  @apply border border-lighter-gray w-2 h-2 top-5;
 }
