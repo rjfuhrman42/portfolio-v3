@@ -83,7 +83,7 @@ export default function Home() {
             })}
           </div>
           <Link
-            href={"/Reid_Fuhrman_Resume_2023.pdf"}
+            href={"/Reid_Fuhrman_Resume_2024.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="text-center w-full block sm:text-right font-heading-tall text-accent-yellow hover:text-accent-orange"
