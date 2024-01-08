@@ -19,7 +19,7 @@ const modalzTall = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://www.reidfuhrman.com/"),
   title: "Reid Fuhrman",
   description: "Software Engineer in New York",
   openGraph: {
