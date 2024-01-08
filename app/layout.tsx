@@ -19,8 +19,23 @@ const modalzTall = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"),
   title: "Reid Fuhrman",
-  description: "Reid Fuhrman's personal website",
+  description: "Software Engineer in New York",
+  openGraph: {
+    title: "Reid Fuhrman",
+    description: "Software Engineer in New York",
+    url: "https://www.reidfuhrman.com/",
+    images: [
+      {
+        url: "hi_im_reid.png", // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
