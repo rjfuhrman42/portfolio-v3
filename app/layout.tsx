@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body>
         {children}
         <div className="noise"></div>
+        <Analytics />
       </body>
     </html>
   );
