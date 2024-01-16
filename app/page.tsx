@@ -9,15 +9,26 @@ export default function Home() {
   const projectEntries = [
     {
       title: "FluidLogic Website",
-      description: "Marketing and Ecommerce site.",
+      description: "Marketing and Ecommerce site. Contenful integration.",
       image: "/water-drop-icon.webp",
+      technologies: ["Next.js", "TailwindCSS", "Contentful CMS", "GraphQL"],
       accentColor: "bg-darkest-blue",
       url: "https://www.fluidlogic.com/",
+    },
+    {
+      title: "COVID School Data Hub",
+      description:
+        "A hub for COVID-19 data related to schools and learning modes.",
+      image: "/surgical-mask.png",
+      technologies: ["Next.js", "TailwindCSS", "D3.js", "Contentful CMS"],
+      accentColor: "bg-accent-orange",
+      url: "https://www.covidschooldatahub.com/",
     },
     {
       title: "React Games List",
       description: "Think Letterboxd for video games.",
       image: "/react-games-list.png",
+      technologies: ["React", "CSS", "Firebase", "RAWG API"],
       accentColor: "bg-tan",
       url: "https://react-games-list.web.app/",
     },
@@ -26,6 +37,7 @@ export default function Home() {
       description:
         "The FreeCodeCamp Nashville meetup group site. A hub for events and would-be members.",
       image: "/fcc_secondary_small.png",
+      technologies: ["Gatsby", "Netlify", "Meetup API", "FaunaDB"],
       accentColor: "bg-accent-yellow",
       url: "https://www.nashvillefcc.com/",
     },
@@ -34,6 +46,7 @@ export default function Home() {
       description:
         "A fun themed pick-up card game based on the Danganronpa 2 visual novel.",
       image: "/mini-mono.png",
+      technologies: ["HTML", "CSS", "JavaScript"],
       accentColor: "bg-accent-pink",
       url: "https://dangan2-memory-game.web.app/",
     },
@@ -112,6 +125,7 @@ export default function Home() {
                   title={entry.title}
                   description={entry.description}
                   image={entry.image}
+                  technologies={entry?.technologies}
                   accentColor={entry?.accentColor}
                   url={entry.url}
                 />
