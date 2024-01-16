@@ -8,6 +8,13 @@ import { jobEntries } from "@/data/jobEntries";
 export default function Home() {
   const projectEntries = [
     {
+      title: "FluidLogic Website",
+      description: "Marketing and Ecommerce site.",
+      image: "/water-drop-icon.webp",
+      accentColor: "bg-darkest-blue",
+      url: "https://www.fluidlogic.com/",
+    },
+    {
       title: "React Games List",
       description: "Think Letterboxd for video games.",
       image: "/react-games-list.png",
@@ -94,7 +101,9 @@ export default function Home() {
 
         {/* ------------------ Projects Section ------------------ */}
         <div className="w-full py-16" id="projects">
-          <h2 className="text-accent-blue w-48">Some Personal Projects</h2>
+          <h2 className="text-accent-blue w-64">
+            Some Projects i&apos;ve Worked On
+          </h2>
           <div className="flex flex-col gap-y-12 py-12">
             {projectEntries.map((entry) => {
               return (
