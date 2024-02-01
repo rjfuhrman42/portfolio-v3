@@ -8,6 +8,14 @@ import { jobEntries } from "@/data/jobEntries";
 export default function Home() {
   const projectEntries = [
     {
+      title: "Vayda Website",
+      description: "Marketing site with Contenful integration.",
+      image: "/green-leaf.png",
+      technologies: ["Next.js", "TailwindCSS", "Contentful CMS", "GraphQL"],
+      accentColor: "bg-accent-green",
+      url: "https://www.vayda.com/",
+    },
+    {
       title: "FluidLogic Website",
       description: "Marketing and Ecommerce site. Contenful integration.",
       image: "/water-drop-icon.webp",
@@ -103,7 +111,7 @@ export default function Home() {
             })}
           </div>
           <Link
-            href={"/Reid_Fuhrman_Resume_2024.pdf"}
+            href={"/Reid_Fuhrman_resume.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="text-center w-full block sm:text-right font-heading-tall text-accent-yellow hover:text-accent-orange"

@@ -41,7 +41,7 @@ function ProjectEntry({
             <div className="flex flex-row flex-wrap gap-1 py-1 md:py-0">
               {technologies?.map((name, index) => {
                 return (
-                  <div key={index} className="px-1 py-0.5 bg-darkest-blue">
+                  <div key={index} className="px-1 py-0.5≠ bg-darkest-blue">
                     <p className="px-1 text-xs md:text-sm">{name}</p>
                   </div>
                 );
