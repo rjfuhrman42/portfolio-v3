@@ -77,9 +77,9 @@ export default function Home() {
           </div>
           <p>
             I’m Reid Fuhrman, a software engineer based in Brooklyn, New York.
-            I&apos;m passionate about helping people building beautiful, useful
-            things on the web. Most recently i&apos;ve had the privelege of
-            working at Township, a design and development agency where I was
+            I&apos;m passionate about helping people build beautiful, useful
+            things on the web. Most recently, i&apos;ve had the privilege of
+            working at Township, a design and development agency, where I was
             exposed to a wide variety of clients from varying industries and
             helped bring their products to life.
             <br></br>
