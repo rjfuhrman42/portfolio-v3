@@ -76,16 +76,21 @@ export default function Home() {
             </h1>
           </div>
           <p>
-            I’m Reid Fuhrman, a software engineer based in Brooklyn, New York.
-            I&apos;m passionate about helping people build beautiful, useful
-            things on the web. Most recently, i&apos;ve had the privilege of
-            working at Township, a design and development agency, where I was
-            exposed to a wide variety of clients from varying industries and
-            helped bring their products to life.
+            I’m Reid Fuhrman, a software engineer who specializes in front-end
+            and mobile development. I help bring products to life and solve
+            problems for businesses using technologies like React Native,
+            Next.js, and TailwindCSS to build user-friendly, performant web and
+            mobile apps. I&apos;m particularly passionate about building
+            software where beautiful design and quality engineering intersect.
             <br></br>
-            <br></br>My main focus today is continuing to grow my frontend
-            expertise while actively seeking out opportunities to learn and grow
-            my backend skillset.
+            <br></br>
+            Most recently, i&apos;ve had the privilege of working at Township, a
+            design and development agency, where I worked with a variety of
+            clients & industries and helped build their products.
+            <br></br>
+            <br></br>At the moment, I&apos;m actively seeking a new role as a
+            software engineer. If you think I could be a good fit for your team,
+            I&apos;d love to hear from you!
             <br></br>
             <br></br>While not coding, you can find me practicing guitar,
             cooking a new recipe in my wok, or riding my fixed gear bike through
