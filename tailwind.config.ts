@@ -10,8 +10,10 @@ const config: Config = {
     extend: {
       fontFamily: {
         heading: ['var(--font-modalz-short)'],
+        headers: ['var(--font-w95fa)'],
         "heading-tall": ['var(--font-modalz-tall)'],
-        body: ['var(--font-fixedsys-excelsior)'],
+        body: ['var(--font-pixel-operator)'],
+        // body: ['var(--font-fixedsys-excelsior)'],
       },
       colors: {
         "darkest-blue": "#002B36",

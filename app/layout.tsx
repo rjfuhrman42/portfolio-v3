@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
 
 const fixedSysExcelsior = localFont({
   src: "../fonts/Fixedsys-Excelsior-Regular.woff",
@@ -17,6 +15,14 @@ const modalzShort = localFont({
 const modalzTall = localFont({
   src: "../fonts/modalz-tall.woff2",
   variable: "--font-modalz-tall",
+});
+const pixelOperator = localFont({
+  src: "../fonts/pixeloperator.woff2",
+  variable: "--font-pixel-operator",
+});
+const w95fa = localFont({
+  src: "../fonts/w95fa.woff",
+  variable: "--font-w95fa",
 });
 
 export const metadata: Metadata = {
@@ -47,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable} scroll-smooth h-full`}
+      className={`${w95fa.variable} ${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable} ${pixelOperator.variable} scroll-smooth h-full`}
     >
       <body>
         {children}

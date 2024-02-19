@@ -31,7 +31,7 @@ h5 {
 }
 
 h1 {
-  @apply text-4xl font-body;
+  @apply text-4xl font-headers;
 }
 
 h2 {
@@ -39,8 +39,7 @@ h2 {
 }
 
 p {
-  font-family: var(--font-fixedsys-excelsior);
-  @apply text-base xl:text-lg;
+  @apply text-xl font-body xl:text-2xl;
 }
 
 a {

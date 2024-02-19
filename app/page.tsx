@@ -66,19 +66,19 @@ export default function Home() {
         <Navbar />
 
         {/* ------------------ Hero Section ------------------ */}
-        <div className="w-full pt-16 pb-12">
+        <div className="w-full pt-16 md:pt-36 pb-12">
           <div className="pb-11 xs:w-3/4">
-            <h1 className="text-accent-green md:text-5xl">
+            <h1 className="text-accent-green md:text-6xl">
               Hi, I&apos;m Reid.
             </h1>
-            <h1 className="md:text-5xl">
+            <h1 className="md:text-6xl">
               A Software Engineer based in New York.
             </h1>
           </div>
           <p>
-            I’m Reid Fuhrman, a software engineer who specializes in front-end
-            and mobile development. I help bring products to life and solve
-            problems for businesses using technologies like React Native,
+            I&apos;m Reid Fuhrman, a software engineer who specializes in
+            front-end and mobile development. I help bring products to life and
+            solve problems for businesses using technologies like React Native,
             Next.js, and TailwindCSS to build user-friendly, performant web and
             mobile apps. I&apos;m particularly passionate about building
             software where beautiful design and quality engineering intersect.
