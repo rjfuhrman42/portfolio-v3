@@ -39,7 +39,7 @@ h2 {
 }
 
 p {
-  @apply text-lg font-body xl:text-xl;
+  @apply text-xl font-body xl:text-2xl;
 }
 
 a {

@@ -8,7 +8,7 @@ export const jobEntries = [
         "Hired on as a Junior Engineer and grew into a mid-level engineer role. Worked largely on React Native Bluetooth apps for iOS and Android, with some interlude into building client marketing sites with Next.js.",
     },
     {
-      company: "USAF, 402nd Software Engineering Squadron",
+      company: "USAF",
       title: "Computer Scientist",
       startDate: "May 2020",
       endDate: "Mar. 2022",
