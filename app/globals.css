@@ -8,19 +8,10 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   position: relative;
-  color: rgb(var(--foreground-rgb));
   z-index: 1;
-  @apply text-lighter-gray bg-darkest-blue;
+  @apply bg-light-tan text-darkest-gray dark:text-lighter-gray dark:bg-darkest-blue;
 }
 
 h2,
@@ -55,6 +46,12 @@ a {
   position: absolute;
   z-index: -1;
   top: 0;
+}
+
+.imageFix {
+  position: relative !important;
+  width: 12px !important;
+  height: 12px !important;
 }
 
 .cycleText {

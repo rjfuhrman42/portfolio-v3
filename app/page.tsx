@@ -119,7 +119,7 @@ export default function Home() {
             href={"/Reid_Fuhrman_resume.pdf"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-center w-full block sm:text-right font-heading-tall text-accent-yellow hover:text-accent-orange"
+            className="text-center w-full block sm:text-right font-heading-tall text-accent-orange hover:text-accent-red dark:text-accent-yellow hover:dark:text-accent-orange"
           >
             Looking for my resume? Click here.
           </Link>

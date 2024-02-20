@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 
 import "./globals.css";
+import { Providers } from "./providers";
 
 const fixedSysExcelsior = localFont({
   src: "../fonts/Fixedsys-Excelsior-Regular.woff",
@@ -52,12 +53,15 @@ export default function RootLayout({
 }) {
   return (
     <html
+      suppressHydrationWarning
       lang="en"
       className={`${w95fa.variable} ${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable} ${pixelOperator.variable} scroll-smooth h-full`}
     >
       <body>
-        {children}
-        <div className="noise"></div>
+        <Providers>
+          {children}
+          <div className="noise"></div>
+        </Providers>
         <Analytics />
       </body>
     </html>
