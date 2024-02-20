@@ -14,8 +14,10 @@ function JobEntry({ company, title, startDate, endDate, description }: Props) {
       <div className="flex flex-col flex-1 gap-y-2">
         <div className="flex flex-row">
           <div className="flex flex-col">
-            <p className="text-tan text-2xl font-headers">{title}</p>
-            <p className="text-accent-green text-sm font-heading-tall pt-2">
+            <p className="text-dark-gray dark:text-tan text-2xl font-headers">
+              {title}
+            </p>
+            <p className="text-accent-blue dark:text-accent-green text-sm font-heading-tall pt-2">
               {company}
             </p>
           </div>

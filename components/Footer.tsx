@@ -5,14 +5,7 @@ interface FooterItem {
   handle: string;
   label: string;
   url: string;
-  color?:
-    | "text-accent-pink"
-    | "text-accent-blue"
-    | "text-accent-yellow"
-    | "text-accent-red"
-    | "text-accent-teal"
-    | "text-accent-purple"
-    | "text-accent-green";
+  color: string;
 }
 
 const footerItems: FooterItem[] = [
@@ -20,19 +13,19 @@ const footerItems: FooterItem[] = [
     label: "Email",
     handle: "hey@reidfuhrman.com",
     url: "mailto:hey@reidfuhrman.com",
-    color: "text-accent-green",
+    color: "text-accent-red dark:text-accent-green",
   },
   {
     label: "Github",
     handle: "git/rjfuhrman42",
     url: "https://github.com/rjfuhrman42",
-    color: "text-accent-teal",
+    color: "text-accent-orange dark:text-accent-teal",
   },
   {
     label: "LinkedIn",
     handle: "in/reid-fuhrman",
     url: "https://www.linkedin.com/in/reid-fuhrman/",
-    color: "text-accent-blue",
+    color: "text-accent-pink dark:text-accent-blue",
   },
   {
     label: "Codepen",
@@ -44,8 +37,10 @@ const footerItems: FooterItem[] = [
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-between w-full bg-dark-blue p-6 gap-x-8">
-      <h2 className="text-accent-yellow pb-4">Contact Me</h2>
+    <div className="flex flex-col justify-between w-full bg-tan dark:bg-dark-blue p-6 gap-x-8">
+      <h2 className="text-accent-orange dark:text-accent-yellow pb-4">
+        Contact Me
+      </h2>
       <div className="flex flex-col gap-y-4 md:gap-y-0">
         {footerItems.map((item) => {
           return (

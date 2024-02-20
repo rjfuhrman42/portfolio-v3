@@ -1,16 +1,21 @@
 import Link from "next/link";
 import React from "react";
+import { ThemeChanger } from "./ThemeChanger";
 
 interface NavItem {
   href: string;
   label: string;
-  color?: "text-accent-pink" | "text-accent-blue" | "text-accent-yellow";
+  color?: string;
 }
 
 const navItems: NavItem[] = [
   { href: "/#work", label: "Work", color: "text-accent-pink" },
   { href: "/#projects", label: "Projects", color: "text-accent-blue" },
-  { href: "/#contact", label: "Contact", color: "text-accent-yellow" },
+  {
+    href: "/#contact",
+    label: "Contact",
+    color: "text-accent-orange dark:text-accent-yellow",
+  },
 ];
 
 const Navbar = () => {
@@ -30,6 +35,7 @@ const Navbar = () => {
           </Link>
         );
       })}
+      <ThemeChanger />
     </div>
   );
 };
