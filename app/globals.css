@@ -31,7 +31,7 @@ h5 {
 }
 
 h1 {
-  @apply text-4xl font-body;
+  @apply text-4xl font-headers uppercase;
 }
 
 h2 {
@@ -39,8 +39,7 @@ h2 {
 }
 
 p {
-  font-family: var(--font-fixedsys-excelsior);
-  @apply text-base xl:text-lg;
+  @apply text-lg font-body xl:text-xl;
 }
 
 a {
@@ -56,4 +55,22 @@ a {
   position: absolute;
   z-index: -1;
   top: 0;
+}
+
+.cycleText {
+  animation: cycleColor 2s infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-rule: both;
+}
+
+@keyframes cycleColor {
+  0% {
+    @apply text-accent-green;
+  }
+  50% {
+    @apply text-accent-orange;
+  }
+  100% {
+    @apply text-accent-green;
+  }
 }
