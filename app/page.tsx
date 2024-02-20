@@ -62,16 +62,16 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <div className="max-w-2xl pt-8 md:pt-16 pb-4 px-4 xs:px-6 lg:px-0 flex flex-col items-center justify-center">
+      <div className="max-w-xl pt-8 md:pt-16 pb-4 px-4 xs:px-6 lg:px-0 flex flex-col items-center justify-center">
         <Navbar />
 
         {/* ------------------ Hero Section ------------------ */}
-        <div className="w-full pt-16 md:pt-36 pb-12">
-          <div className="pb-11 xs:w-3/4">
-            <h1 className="text-accent-green md:text-6xl">
+        <div className="w-full pt-16 md:pt-20 pb-12">
+          <div className="pb-11 flex flex-col items-start w-full">
+            <h1 className="cycleText md:text-5xl xs:w-3/4">
               Hi, I&apos;m Reid.
             </h1>
-            <h1 className="md:text-6xl">
+            <h1 className="text-accent-blue text-xl w-3/4 md:text-2xl md:w-full">
               A Software Engineer based in New York.
             </h1>
           </div>
