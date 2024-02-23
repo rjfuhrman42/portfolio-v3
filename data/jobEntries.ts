@@ -1,11 +1,21 @@
+export type JobProps = {
+    company: string;
+    title: string;
+    url?: string;
+    startDate: string;
+    endDate: string;
+    description: string;
+  };
+
 export const jobEntries = [
     {
       company: "Township",
       title: "Software Engineer",
+      url: "https://www.township.agency/",
       startDate: "Apr. 2022",
       endDate: "Nov. 2023",
       description:
-        "Hired on as a Junior Engineer and grew into a mid-level engineer role. Worked largely on React Native Bluetooth apps for iOS and Android, with some interlude into building client marketing sites with Next.js.",
+        "Small design and dev agency where I worked largely on React Native Bluetooth apps for iOS and Android, with some interlude into building client marketing sites with Next.js, TailwindCSS, and Contentful CMS.",
     },
     {
       company: "USAF",

@@ -77,24 +77,19 @@ export default function Home() {
           </div>
           <p>
             I&apos;m Reid Fuhrman, a software engineer who specializes in
-            front-end and mobile development. I help bring products to life and
-            solve problems for businesses using technologies like React Native,
-            Next.js, and TailwindCSS to build user-friendly, performant web and
-            mobile apps. I&apos;m particularly passionate about building
-            software where beautiful design and quality engineering intersect.
+            front-end and mobile development.
             <br></br>
             <br></br>
-            Most recently, i&apos;ve had the privilege of working at Township, a
-            design and development agency, where I worked with a variety of
-            clients & industries and helped build their products.
+            I&apos;m experienced in using React, Next.js, TypeScript, and
+            TailwindCSS to build websites and web apps for businesses that are
+            beautiful, user-friendly, and functional. More recently, I&apos;ve
+            also been using React Native to build cross-platform mobile apps
+            that focus on interacting with Bluetooth wearable devices.
             <br></br>
-            <br></br>At the moment, I&apos;m actively seeking a new role as a
-            software engineer. If you think I could be a good fit for your team,
-            I&apos;d love to hear from you!
             <br></br>
-            <br></br>While not coding, you can find me practicing guitar,
-            cooking a new recipe in my wok, or riding my fixed gear bike through
-            the (terrifying(fun)) streets of NYC.
+            While not coding, you can find me cooking a new recipe in my wok,
+            practicing guitar, or riding my fixed gear bike through the
+            (terrifying(fun)) streets of NYC.
           </p>
         </div>
 
@@ -108,6 +103,7 @@ export default function Home() {
                   key={entry.company}
                   company={entry.company}
                   title={entry.title}
+                  url={entry.url}
                   startDate={entry.startDate}
                   endDate={entry.endDate}
                   description={entry.description}

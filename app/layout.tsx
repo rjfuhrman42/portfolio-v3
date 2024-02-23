@@ -60,7 +60,7 @@ export default function RootLayout({
       <body>
         <Providers>
           {children}
-          <div className="noise"></div>
+          {/* <div className="noise"></div> */}
         </Providers>
         <Analytics />
       </body>
