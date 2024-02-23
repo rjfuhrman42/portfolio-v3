@@ -5,7 +5,11 @@ import ProjectEntry from "@/components/ProjectEntry";
 import Link from "next/link";
 import { jobEntries } from "@/data/jobEntries";
 
-export default function Home() {
+import { getSortedPostsData } from "../lib/posts";
+
+export default async function Home() {
+  const allPostsData = getSortedPostsData();
+
   const projectEntries = [
     {
       title: "Vayda Website",
@@ -140,6 +144,20 @@ export default function Home() {
                 />
               );
             })}
+          </div>
+        </div>
+
+        {/* ------------------ Blog Posts Section ------------------ */}
+        <div className="w-full py-16" id="projects">
+          <h2 className="text-accent-teal w-64">Blog posts</h2>
+          <div className="flex flex-col gap-y-12 py-12">
+            {allPostsData.map(({ slug, date, title }) => (
+              <Link href={`/blog/${slug}`} key={slug}>
+                <p>{title}</p>
+                <br />
+                {date}
+              </Link>
+            ))}
           </div>
         </div>
 
