@@ -14,7 +14,8 @@ const config: Config = {
         headers: ['var(--font-w95fa)'],
         "heading-tall": ['var(--font-modalz-tall)'],
         body: ['var(--font-pixel-operator)'],
-        // body: ['var(--font-fixedsys-excelsior)'],
+        inter: ['var(--font-inter)'],
+        fixedsys: ['var(--font-fixedsys-excelsior)'],
       },
       colors: {
         "darkest-blue": "#002B36",

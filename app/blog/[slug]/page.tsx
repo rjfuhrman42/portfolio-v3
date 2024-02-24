@@ -1,6 +1,8 @@
 import { getMDXComponent } from "mdx-bundler/client";
-
+import dayjs from "dayjs";
 import { getSortedPostsData, getPostDataBySlug } from "@/lib/posts";
+import Navbar from "@/components/Navbar";
+import MDXComponent from "@/components/MDXComponent";
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
@@ -14,17 +16,27 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: { slug: string } }) {
   const { frontmatter, code } = await getPostDataBySlug(params.slug);
 
-  const Component = getMDXComponent(code);
+  const publishedDate = dayjs(frontmatter.date).format("MMMM D, YYYY");
 
   return (
     <>
-      <div className="flex min-h-screen flex-col items-center justify-between">
-        <div className="max-w-[38rem] pt-8 md:pt-16 pb-4 px-4 xs:px-6 lg:px-0 flex flex-col items-center justify-center">
-          <h1>{frontmatter.title}</h1>
+      <div className="flex min-h-screen flex-col items-center overflow-x-hidden">
+        <div className="w-full px-4 xs:px-6 pt-6 bg-tan dark:bg-dark-blue flex flex-col justify-between items-center">
+          <div className="container max-w-2xl">
+            <Navbar />
+            <div className="blog flex flex-col justify-evenly gap-y-4 pt-24 sm:pt-48">
+              <h1 className="normal-case">{frontmatter.title}</h1>
+              <p className="text-sm font-inter self-start pt-2 pb-4 sm:pt-4 sm:pb-8">
+                {publishedDate}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="container max-w-2xl py-8 sm:py-16 px-4 xs:px-6 lg:px-0 flex flex-col items-center justify-center">
           <p>{frontmatter.description}</p>
-          <p>{frontmatter.date}</p>
-          <article>
-            <Component />
+          <article className="blog">
+            <MDXComponent code={code} />
           </article>
         </div>
       </div>
