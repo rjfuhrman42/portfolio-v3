@@ -17,6 +17,16 @@ const config: Config = {
         inter: ['var(--font-inter)'],
         fixedsys: ['var(--font-fixedsys-excelsior)'],
       },
+      animation: {
+        "cycle-color": "cycle 2s ease-in-out infinite",
+      },
+      keyframes: {
+        "cycle": {
+          '0%': { color: "var(--accent-green)"},
+          '50%': { color: "var(--accent-orange)"},
+          '100%': { color: "var(--accent-green)"},
+        }
+      },
       colors: {
         "darkest-blue": "#002B36",
         "dark-blue": "#073642",
@@ -40,8 +50,12 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      width: {
+        '2xl': '42rem',
+      },
       screens: {
         'xs': '475px',
+        'base-width': '42rem'
       },
     },
   },
