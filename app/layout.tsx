@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { Inter_Tight } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
 import { Providers } from "./providers";
+
+const inter = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["300", "400", "700"],
+});
 
 const fixedSysExcelsior = localFont({
   src: "../fonts/Fixedsys-Excelsior-Regular.woff",
@@ -55,7 +62,7 @@ export default function RootLayout({
     <html
       suppressHydrationWarning
       lang="en"
-      className={`${w95fa.variable} ${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable} ${pixelOperator.variable} scroll-smooth h-full`}
+      className={`${inter.className} ${w95fa.variable} ${fixedSysExcelsior.variable} ${modalzShort.variable} ${modalzTall.variable} ${pixelOperator.variable} scroll-smooth h-full`}
     >
       <body>
         <Providers>
