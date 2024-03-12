@@ -27,23 +27,15 @@ const Img: React.FC<ImageProps> = (props) => {
   const { src, alt, title } = props;
 
   if (!src) return;
-  console.log(title);
 
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-img-element*/}
       <img
-        className="my-4"
+        className="my-4 rounded-lg"
         src={src}
         alt={alt ?? "Image has no defined alternate text"}
       />
-
-      {/* <Image
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        fill
-        src={src}
-        alt={alt ?? "Image has no defined alternate text"}
-      /> */}
 
       {title && <label className="text-sm block">{title}</label>}
     </>

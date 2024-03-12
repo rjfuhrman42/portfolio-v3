@@ -30,6 +30,7 @@ const config: Config = {
       colors: {
         "darkest-blue": "#002B36",
         "dark-blue": "#073642",
+        "medium-blue": "#153b46",
         "darkest-gray": "#586E75",
         "dark-gray": "#586E75",
         "light-gray": "#839496",

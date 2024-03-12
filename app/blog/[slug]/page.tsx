@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { getSortedPostsData, getPostDataBySlug } from "@/lib/posts";
 import Navbar from "@/components/Navbar";
 import MDXComponent from "@/components/MDXComponent";
+import Link from "next/link";
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
@@ -24,10 +25,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <div className="container max-w-3xl px-6 xs:px-12">
             <Navbar />
             <div className="blog flex flex-col justify-evenly gap-y-4 pt-24 sm:pt-48">
+              <Link className="!font-body text-lg" href="/blog">
+                {"< go back"}
+              </Link>
               <h1 className="normal-case !text-5xl !font-body text-accent-pink dark:text-accent-teal">
                 {frontmatter.title}
               </h1>
-              <p className="text-xl font-body self-start pt-2 pb-4 sm:pt-4 sm:pb-8">
+              <p className="!text-xl !font-body self-start pt-2 pb-4 sm:pt-4 sm:pb-8">
                 {publishedDate}
               </p>
             </div>

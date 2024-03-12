@@ -5,12 +5,7 @@ import ProjectEntry from "@/components/ProjectEntry";
 import Link from "next/link";
 import { jobEntries } from "@/data/jobEntries";
 
-import { getSortedPostsData } from "../lib/posts";
-import dayjs from "dayjs";
-
 export default async function Home() {
-  const allPostsData = getSortedPostsData();
-
   const projectEntries = [
     {
       title: "Vayda Website",
@@ -95,6 +90,16 @@ export default async function Home() {
             While not coding, you can find me cooking a new recipe in my wok,
             practicing guitar, or riding my fixed gear bike through the
             (terrifying(fun)) streets of NYC.
+            <br></br>
+            <br></br>
+            You can also learn a little bit more about what I do by heading to
+            <Link
+              href="/blog"
+              key="blog"
+              className={`font-body p-1 md:py-4 md:px-2 animate-cycle-color`}
+            >
+              my blog!
+            </Link>
           </p>
         </div>
 
@@ -145,20 +150,6 @@ export default async function Home() {
                 />
               );
             })}
-          </div>
-        </div>
-
-        {/* ------------------ Blog Posts Section ------------------ */}
-        <div className="w-full py-16" id="projects">
-          <h2 className="text-accent-teal w-64">Blog posts</h2>
-          <div className="flex flex-col gap-y-12 py-12">
-            {allPostsData.map(({ slug, date, title }) => (
-              <Link href={`/blog/${slug}`} key={slug}>
-                <p>{title}</p>
-                <br />
-                <p className="text-lg">{dayjs(date).format("MMMM D, YYYY")}</p>
-              </Link>
-            ))}
           </div>
         </div>
 

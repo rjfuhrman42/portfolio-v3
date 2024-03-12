@@ -94,11 +94,11 @@ li > ul {
 }
 
 code {
-  @apply font-mono p-1 rounded bg-tan text-darkest-blue dark:text-lighter-gray dark:bg-dark-blue !text-sm;
+  @apply font-mono p-1 rounded bg-tan text-darkest-blue dark:text-lighter-gray dark:bg-medium-blue !text-sm;
 }
 
 .blog a {
-  @apply !font-inter text-accent-blue hover:animate-cycle-color;
+  @apply font-inter text-accent-orange dark:text-accent-blue hover:animate-cycle-color;
 }
 
 .blog p {
