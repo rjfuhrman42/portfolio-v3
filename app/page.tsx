@@ -23,15 +23,15 @@ export default async function Home() {
       accentColor: "bg-darkest-blue",
       url: "https://www.fluidlogic.com/",
     },
-    {
-      title: "COVID School Data Hub",
-      description:
-        "A hub for COVID-19 data related to schools and learning modes.",
-      image: "/surgical-mask.png",
-      technologies: ["Next.js", "TailwindCSS", "D3.js", "Contentful CMS"],
-      accentColor: "bg-accent-orange",
-      url: "https://www.covidschooldatahub.com/",
-    },
+    // {
+    //   title: "COVID School Data Hub",
+    //   description:
+    //     "A hub for COVID-19 data related to schools and learning modes.",
+    //   image: "/surgical-mask.png",
+    //   technologies: ["Next.js", "TailwindCSS", "D3.js", "Contentful CMS"],
+    //   accentColor: "bg-accent-orange",
+    //   url: "https://www.covidschooldatahub.com/",
+    // },
     {
       title: "React Games List",
       description: "Think Letterboxd for video games.",
