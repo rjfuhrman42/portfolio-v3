@@ -45,6 +45,9 @@ const config: Config = {
         "accent-blue": "#53A5DF",
         "accent-teal": "#6CDAD1",
         "accent-green": "#C2E000",
+        "accent-blue-faded": "RGBA(83, 165, 223, 0.2)",
+        "accent-pink-faded": "RGBA(249, 16, 144, 0.2)",
+        "accent-yellow-faded": "RGBA(255, 204, 51, 0.2)",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -6,15 +6,31 @@ interface NavItem {
   href: string;
   label: string;
   color?: string;
+  border?: string;
+  bg?: string;
 }
 
 const navItems: NavItem[] = [
-  { href: "/#work", label: "Work", color: "text-accent-pink" },
-  { href: "/#projects", label: "Projects", color: "text-accent-blue" },
+  {
+    href: "/#work",
+    label: "Work",
+    color: "text-accent-pink",
+    border: "hover:border-accent-pink",
+    bg: "hover:bg-accent-pink-faded",
+  },
+  {
+    href: "/#projects",
+    label: "Projects",
+    color: "text-accent-blue",
+    border: "hover:border-accent-blue",
+    bg: "hover:bg-accent-blue-faded",
+  },
   {
     href: "/#contact",
     label: "Contact",
     color: "text-accent-orange dark:text-accent-yellow",
+    border: "hover:border-accent-yellow",
+    bg: "hover:bg-accent-yellow-faded",
   },
 ];
 
@@ -29,7 +45,7 @@ const Navbar = () => {
           <Link
             href={item.href}
             key={item.label}
-            className={`${item.color} p-1 md:py-4 md:px-2 md:text-lg`}
+            className={`${item.color} border-2 border-transparent p-1 md:py-4 md:px-2 md:text-lg ${item.border} ${item.bg}`}
           >
             {item.label}
           </Link>
