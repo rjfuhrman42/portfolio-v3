@@ -66,7 +66,7 @@ export default async function Home() {
         <Navbar />
 
         {/* ------------------ Hero Section ------------------ */}
-        <div className="w-full pt-16 md:pt-28 pb-12">
+        <div className="w-full pt-16 md:pt-24 pb-12">
           <div className="pb-11 flex flex-col items-start w-full">
             <h1 className="cycleText md:text-5xl xs:w-3/4">
               Hi, I&apos;m Reid.
@@ -92,13 +92,13 @@ export default async function Home() {
             (terrifying(fun)) streets of NYC.
             <br></br>
             <br></br>
-            You can also learn a little bit more about what I do by heading to
+            PS: I also have a
             <Link
               href="/blog"
               key="blog"
-              className={`font-body p-1 md:py-4 md:px-2 animate-cycle-color`}
+              className="font-body p-1 md:py-4 md:px-2 animate-cycle-color"
             >
-              my blog!
+              blog!
             </Link>
           </p>
         </div>
