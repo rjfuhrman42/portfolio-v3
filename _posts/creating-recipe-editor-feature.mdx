@@ -1,0 +1,77 @@
+---
+title: "Creating My Recipe Editor Feature"
+excerpt: "I talk about how I implemented my recipe editor feature along with the trials and tribulations it came with."
+date: "2024-04-11T05:35:07.322Z"
+author:
+  name: Reid Fuhrman
+ogImage:
+  url: "/assets/blog/hello-world/cover.jpg"
+---
+
+As you may know, I'm building an app that allows you to import recipes from a URL, save them in a library, and view them in a nice format. I haven't made a post announcing it or anything, but I've been hard at work these past couple weeks. It's even got a name now, **Cookeri**! Recently, I've finally started to build out the editing feature! Woohoo! 
+
+## Recipe editor - the goals
+The recipe editor is meant to be simple and self-explanatory. It simply allows you to edit the data of a recipe you've imported. At the moment, I'm only allowing the editing of the *recipe title*, *ingredients*, and *steps*. In the future, I plan to allow users to choose the recipe image if more than one image exists or if I allow users to upload their own image of the dish.
+
+## The title field - simple
+For the title field, you can simply edit it in the `SideBar` component, and it will update live on the `RecipeViewer`. I already store all the recipe data in a React state once it's imported, so making changes in the title input just updates the title property of the state.
+
+![GIF of typing into an input bar and changing the name of a recipe](/title-edit.gif)
+
+## Ingredients - Pretty Simple
+For editing ingredients, I've created a standalone component called the `IngredientsEditor`. This takes props for 'ingredients', of course, as well as two callback functions, `onSave()` and `onCancel()`. The editor itself is actually just a `textarea` with all of the ingredients loaded in as an editable string. If the recipe website is using JSON-LD, then the ingredients themselves come as an array of strings for each ingredient. So we can simply `join()` the array into one big string. When done editing, we `split()` the string back into an array and save. Simple. Here's what those functions look like:
+
+```.tsx
+  function parseRecipeData() {
+    return ingredients.join("\n");
+  }
+
+  function saveRecipeData(data: string) {
+    const updatedIngredients = data.trim().split("\n");
+    onSave(updatedIngredients);
+  }
+```
+
+And voila, we can edit ingredients! Now, this lets users basically put whatever they want in the text box, but I'm not really concerned about that. If someone actually wants to use this app for its intended purpose, they'll be able to get it. Of course, I do plan to limit how many characters you can input here in the future, as I anticipate that could cause problems! Ingredients and measurements can vary widely across recipes too, so I'm more interested in allowing that freedom than limiting it.
+
+![GIF of typing into an input bar and changing the name of a recipe](/ingredient-edit.gif)
+
+## Steps/Instructions - A little more involved
+I initially combined both the steps editor and ingredients editor into one single recipe editor component, but that got complicated fast. Long story short, recipe instructions will often have sub-sections for separating out parts of a larger recipe. For example, this samosa recipe has nearly six different sections of instructions.
+
+![Scroll the instructions section of a samosa recipe](/recipe-sections.gif)
+
+Parsing this data into text was simple enough. I even tried something funky, like appending the header of each section with the hash symbol `#`, so that I could indicate where sections began and ended. But being able to parse it back into sections in the correct order just wasn't working out. It was too complicated, and honestly, for recipes with a lot of subsections, having to scroll through a huge block of text just to get to the section you need to change wasn't optimal.
+
+So I decided to do it differently. I opted to use a tab system. Basically dynamically create some tabs based on the instruction sections and when you press the tab, the steps for that specific section are displayed in the text area and can be edited. Like this:
+
+![Pressing on tabs that change text on a user interface for recipe instructions](/steps-editor.gif)
+
+This allows me to handle each individual section on its own. I can look through each section and parse the text back into sections. Here's what the `saveRecipeData` function looks like:
+
+```.tsx
+function saveRecipeData() {
+    const updatedInstructions = [];
+
+    for (let [key, value] of Object.entries(stepsData)) {
+      if (key === "Steps") {
+        const inst = value.split("\n\n").map((step) => {
+          return { "@type": "HowToStep", text: step.trim() } as HowToStep;
+        });
+        updatedInstructions.push(...inst);
+      } else {
+        const section = {
+          "@type": "HowToSection",
+          name: key,
+          itemListElement: value.split("\n\n").map((step) => {
+            return { "@type": "HowToStep", text: step.trim() };
+          }),
+        } as HowToSection;
+        updatedInstructions.push(section);
+      }
+    }
+    onSave(updatedInstructions as RecipeSteps);
+  }
+```
+
+And, well, it works! I was able to pull in some nice-looking tabs by using [NextUI's ListBox components](https://nextui.org/docs/components/listbox) and it's much cleaner to look at, if I do say so myself. I plan to allow users to create new tabs and remove existing ones before I fully merge this feature. But other than that, the recipe editor is done!
