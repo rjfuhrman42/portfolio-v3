@@ -15,7 +15,7 @@ export const jobEntries = [
       startDate: "Apr. 2022",
       endDate: "Nov. 2023",
       description:
-        "Small design and dev agency where I worked largely on React Native Bluetooth apps for iOS and Android, with some interlude into building client marketing sites with Next.js, TailwindCSS, and Contentful CMS.",
+        "Design and development agency where I worked largely on React Native Bluetooth apps for iOS and Android, with some interlude into building client marketing sites with Next.js, TailwindCSS, and Contentful CMS.",
     },
     {
       company: "USAF",

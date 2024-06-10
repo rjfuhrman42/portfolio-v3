@@ -24,6 +24,14 @@ export default async function Home() {
       url: "https://www.fluidlogic.com/",
     },
     // {
+    //   title: "Cookeri",
+    //   description: "A web app for collecting recipes. Work in progress!",
+    //   image: "/water-drop-icon.webp",
+    //   technologies: ["Next.js", "TailwindCSS", "Supabase", "NextUI"],
+    //   accentColor: "bg-darkest-blue",
+    //   url: "https://cookeri.vercel.app/",
+    // },
+    // {
     //   title: "COVID School Data Hub",
     //   description:
     //     "A hub for COVID-19 data related to schools and learning modes.",
