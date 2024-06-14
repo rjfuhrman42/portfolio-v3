@@ -8,6 +8,14 @@ import { jobEntries } from "@/data/jobEntries";
 export default async function Home() {
   const projectEntries = [
     {
+      title: "Cookeri",
+      description: "A web app for collecting recipes. Work in progress!",
+      image: "/cookbook.png",
+      technologies: ["Next.js", "TailwindCSS", "Supabase", "NextUI"],
+      accentColor: "bg-cookeri-green",
+      url: "https://cookeri.vercel.app/",
+    },
+    {
       title: "Vayda Website",
       description: "Marketing site with Contenful integration.",
       image: "/green-leaf.png",
@@ -23,14 +31,6 @@ export default async function Home() {
       accentColor: "bg-darkest-blue",
       url: "https://www.fluidlogic.com/",
     },
-    // {
-    //   title: "Cookeri",
-    //   description: "A web app for collecting recipes. Work in progress!",
-    //   image: "/water-drop-icon.webp",
-    //   technologies: ["Next.js", "TailwindCSS", "Supabase", "NextUI"],
-    //   accentColor: "bg-darkest-blue",
-    //   url: "https://cookeri.vercel.app/",
-    // },
     // {
     //   title: "COVID School Data Hub",
     //   description:
