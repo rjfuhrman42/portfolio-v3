@@ -1,0 +1,38 @@
+---
+title: "Progress on Cookeri - Designing as a Developer + Staying Productive" 
+date: "2024-04-29T05:35:07.322Z"
+author:
+  name: Reid Fuhrman
+---
+
+# Progress!
+
+I'm back to making progress on Cookeri. It's been difficult to get some meaningful work done on it as of late. It's easy to lose focus and slowly tinker with personal projects, which isn't always a bad thing. But I've been wanting to wrap up this project for a minute now. I took some time last week to write up some tickets and define what 'done' means, and that has helped a ton. My goal is to have this thing ready to go within a week or two! 
+
+I've summarized some of the work I've done these past couple weeks below:
+- Wrapped up the database and API work for now
+- Finished up the design in Figma
+- Re-designed some sections I wasn't a fan of
+- Implemented the redesign to the editor
+- Started implementing the splash page design 
+
+## Wrapped up the database and API work for now
+
+I felt like I was tinkering on this forever. Supabase makes managing a simple database and API really easy, but I was over thinking what exactly was needed for this to be considered "done". I won't go into too much detail, but I've got all the necessary tables and relationships set up. I've also got the API routes set up. The final snag in the road was figuring out what row level security is and what policies I needed to write for each table. Here's a simple one I wrote:
+
+```.sql
+  alter policy "Enable all operations for authenticated users only"
+  on "public"."recipe_instructions"
+  to authenticated
+  using (
+    true
+  );
+```
+
+
+## Finished up the design in Figma + re-designed some sections
+
+Designing the app has been fun. I've finally settled on something I'm happy with. As a developer, I've learned to keep things as simple as possible and reference what already works. Designing from scratch is hard, especially if you're not a designer! I reach for the [html.to.design](https://html.to.design) plugin a lot, which lets me pull already well-made sites into Figma and use them as a base. From there, I adapt the design to my app and make it my own.
+
+
+![Design on the splash page](/splash-design.png)

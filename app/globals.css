@@ -102,10 +102,14 @@ code {
 }
 
 .blog p {
-  @apply text-lg pb-4;
+  @apply text-lg py-4;
   font-family: var(--inter-font);
   font-weight: 300;
   line-height: 1.75;
+}
+
+.blog ul {
+  @apply list-disc py-2;
 }
 
 .blog video {

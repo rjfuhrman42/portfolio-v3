@@ -7,7 +7,6 @@ import React, {
   ImgHTMLAttributes,
 } from "react";
 import SyntaxHighlighter from "./SyntaxHighlighter";
-import Image from "next/image";
 
 type Props = {
   code: string;
