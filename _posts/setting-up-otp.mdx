@@ -147,7 +147,7 @@ Throughout this project, I've run into issues with mixing Next.js server and cli
 
 ![An error message with the text "You're importing a component that needs useState. It only works in a Client Component, but none of its parents are marked with 'use client'"](/nextjs-error.png)
 
-In order to solve this issue, I ended up moving the server functions to their own file called `login.ts` under my utils directory. That way, I can simply import and call them from wherever I need them, including client components. This also made it so that these could be [pure functions](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/ and not affect anything related to the login page. A win-win!
+In order to solve this issue, I ended up moving the server functions to their own file called `login.ts` under my utils directory. That way, I can simply import and call them from wherever I need them, including client components. This also made it so that these could be [pure functions](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/) and not affect anything related to the login page. A win-win!
 
 I think running into this issue helped me understand how client and server components work just a little bit better.
 
