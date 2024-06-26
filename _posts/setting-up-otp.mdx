@@ -1,0 +1,156 @@
+---
+title: Setting up email OTP with Supabase for Cookeri
+date: 2024-06-26T19:19
+author:
+name: Reid Fuhrman
+---
+
+## One more way to log in
+
+I recently finished the design of Cookeri's login page, which now includes an OAuth button for Google sign-in and a form for logging in with email. However, when you fill out the email and try to sign in, nothing happens. Duh, I haven't set it up yet. Thats what I'm doing today.
+
+![A login form on a website that shows an email input box filled out, and an empty box for a verification code](/login-form.png)
+
+Specifically, I'm going to setup an email login with a one-time passcode as opposed to a traditional password sign-in. I don't want to handle passwords, nor do I have any reason to. Plus, I really like using OTP and not having to remember passwords, so I figured why not learn how to set it up? So without further ado, let's dive into it.
+
+## Setting up the form
+
+The first thing you will need is a form for the user to enter their email. I've already got one setup here. Ignore the ridiculous number of properties, I'm just using a NextUI `Input` and `Button` component wrapped with a regular form element. Any form here will do. The only important part here is that you need to set the `action` property of the form to be the function that will initiate the email sign-in, which I'll show off in the next section.
+
+```.tsx
+<form
+  action={() => handleSignInWithEmail()}
+  className="flex flex-col justify-center items-center gap-y-4"
+>
+  <Input
+    type="email"
+    label="Email"
+    name="email"
+    value={email}
+    size="lg"
+    radius="sm"
+    variant="flat"
+    isInvalid={isInvalid}
+    errorMessage={isInvalid ? "Please enter a valid email address" : ""}
+    labelPlacement="outside"
+    onChange={(e) => {
+      if (isInvalid) setIsInvalid(false);
+      setEmail(e.target.value);
+    }}
+    placeholder="jane@example.com"
+  />
+  {codeSent ? (
+    <Input
+      type="text"
+      label="Verification code"
+      name="code"
+      value={code}
+      size="lg"
+      radius="sm"
+      variant="flat"
+      onChange={(e) => setCode(e.target.value)}
+      labelPlacement="outside"
+    />
+  ) : (
+    <></>
+  )}
+  <Button
+    type="submit"
+    size="lg"
+    variant="solid"
+    color="success"
+    className="text-white text-md font-medium p-2 rounded-md"
+    fullWidth
+  >
+    Continue with email
+  </Button>
+</form>
+```
+
+## Sign in function
+
+Once the submit button is pressed, the current form data will be passed to our function. Here, I'm calling it `handeSignInWithEmail()`. This function will initiate the sign-in process as well as handle all the logic specific to the login page. In this case, I have some state that tracks whether or not the verification code has been sent. This determines whether or not to show the input for the code. I also have two other functions to handle the actual sign, which are external to this file. I'll go into detail below.
+
+```.tsx
+async function handleSignInWithEmail() {
+  if (!email) {
+    setIsInvalid(true);
+    return;
+  }
+  if (codeSent) {
+    // Verify code if its already been sent
+    verifyCode(email, code);
+  } else {
+    // Otherwise, send the code and initiate email sign in
+    signInWithEmail(email);
+    setCodeSent(true);
+  }
+}
+```
+
+`signInWithEmail` takes the email value from the form input. A Supbase client is initialized. From here, we can call the auth function `signInWithOtp()`. This function will send an email that contains the user's verification code.
+
+```.tsx
+export const signInWithEmail = async (email: string) => {
+  const supabase = createClient();
+
+  const { data, error } = await supabase.auth.signInWithOtp({
+    email,
+    options: {
+      shouldCreateUser: true,
+    },
+  });
+  if (error) {
+    console.error(error);
+    return;
+  } else {
+    console.log("otp success", data);
+  }
+};
+```
+
+The email will look something like this:
+
+![An email with a six digit verification code](/email-code.png)
+
+The next step is to verify the code. `verifyCode`, takes the code along with the email. If everything checks out, the user will enter a session and be successfully logged in. You probably don't want to log the session details to the console normally, but I'm just doing that here to make sure everything is working correctly.
+
+```.tsx
+export const verifyCode = async (email: string, code: string) => {
+  const supabase = createClient();
+
+  const {
+    data: { session },
+    error,
+  } = await supabase.auth.verifyOtp({
+    email,
+    token: code,
+    type: "email",
+  });
+
+  if (error) {
+    console.error(error);
+    return;
+  } else {
+    console.log("otp success", session);
+  }
+};
+```
+
+And that should about cover it. No more pesky passwords to remember!
+
+![A gif where the an email form is filled out. A verification code is entered and the page changes from the login page to the user home page.](/otp-login.gif)
+
+## Some issues I ran into
+
+Throughout this project, I've run into issues with mixing Next.js server and client components. In the login form, I initially had the `signInWithEmail` and `verifyCode` functions inside of the login page itself. Since these functions need to be run on the server, that turned the login page into a server component itself. This could be fine, but I wanted to use React state to control the form and conditionally render the verification code input. Next.js server components don't allow React state.
+
+![An error message with the text "You're importing a component that needs useState. It only works in a Client Component, but none of its parents are marked with 'use client'"](/nextjs-error.png)
+
+In order to solve this issue, I ended up moving the server functions to their own file called `login.ts` under my utils directory. That way, I can simply import and call them from wherever I need them, including client components. This also made it so that these could be [pure functions](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/ and not affect anything related to the login page. A win-win!
+
+I think running into this issue helped me understand how client and server components work just a little bit better.
+
+# End
+
+Anyway, thats all from me! Cookeri is like, really close to being done now. The next post I make about might be the last one, so stay tuned. Thanks for reading and have a great week!
