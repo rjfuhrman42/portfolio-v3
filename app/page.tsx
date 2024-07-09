@@ -88,11 +88,16 @@ export default async function Home() {
             front-end and mobile development.
             <br></br>
             <br></br>
-            I&apos;m experienced in using React, Next.js, TypeScript, and
-            TailwindCSS to build websites and web apps for businesses that are
-            beautiful, user-friendly, and functional. More recently, I&apos;ve
-            also been using React Native to build cross-platform mobile apps
-            that focus on interacting with Bluetooth wearable devices.
+            I&apos;m experienced in using{" "}
+            <span className="text-accent-blue font-bold">React</span>,{" "}
+            <span className="text-accent-pink font-bold">Next.js</span>,
+            <span className="text-accent-red font-bold">TypeScript</span>, and{" "}
+            <span className="text-accent-orange font-bold">TailwindCSS</span> to
+            build websites and web apps for businesses that are beautiful,
+            user-friendly, and functional. More recently, I&apos;ve also been
+            using <span className="text-blue-400">React Native</span> to build
+            cross-platform mobile apps that focus on interacting with Bluetooth
+            wearable devices.
             <br></br>
             <br></br>
             While not coding, you can find me cooking a new recipe in my wok,
