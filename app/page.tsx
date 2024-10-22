@@ -9,19 +9,11 @@ export default async function Home() {
   const projectEntries = [
     {
       title: "Cookeri",
-      description: "A web app for collecting recipes. Work in progress!",
+      description: "A web app for importing recipes via URL.",
       image: "/cookbook.png",
       technologies: ["Next.js", "TailwindCSS", "Supabase", "NextUI"],
       accentColor: "bg-cookeri-green",
       url: "https://cookeri.vercel.app/",
-    },
-    {
-      title: "Vayda Website",
-      description: "Marketing site with Contenful integration.",
-      image: "/green-leaf.png",
-      technologies: ["Next.js", "TailwindCSS", "Contentful CMS", "GraphQL"],
-      accentColor: "bg-accent-green",
-      url: "https://www.vayda.com/",
     },
     {
       title: "FluidLogic Website",
@@ -30,6 +22,14 @@ export default async function Home() {
       technologies: ["Next.js", "TailwindCSS", "Contentful CMS", "GraphQL"],
       accentColor: "bg-darkest-blue",
       url: "https://www.fluidlogic.com/",
+    },
+    {
+      title: "Vayda Website",
+      description: "Marketing site with Contenful integration.",
+      image: "/green-leaf.png",
+      technologies: ["Next.js", "TailwindCSS", "Contentful CMS", "GraphQL"],
+      accentColor: "bg-accent-green",
+      url: "https://www.vayda.com/",
     },
     // {
     //   title: "COVID School Data Hub",
@@ -48,15 +48,15 @@ export default async function Home() {
       accentColor: "bg-tan",
       url: "https://react-games-list.web.app/",
     },
-    {
-      title: "FreeCodeCamp Nashville Website",
-      description:
-        "The FreeCodeCamp Nashville meetup group site. A hub for events and would-be members.",
-      image: "/fcc_secondary_small.png",
-      technologies: ["Gatsby", "Netlify", "Meetup API", "FaunaDB"],
-      accentColor: "bg-accent-yellow",
-      url: "https://www.nashvillefcc.com/",
-    },
+    // {
+    //   title: "FreeCodeCamp Nashville Website",
+    //   description:
+    //     "The FreeCodeCamp Nashville meetup group site. A hub for events and would-be members.",
+    //   image: "/fcc_secondary_small.png",
+    //   technologies: ["Gatsby", "Netlify", "Meetup API", "FaunaDB"],
+    //   accentColor: "bg-accent-yellow",
+    //   url: "https://www.nashvillefcc.com/",
+    // },
     {
       title: "Danganronpa 2 Fan Card Game",
       description:
