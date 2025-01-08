@@ -23,14 +23,14 @@ export default async function Home() {
       accentColor: "bg-darkest-blue",
       url: "https://www.fluidlogic.com/",
     },
-    {
-      title: "Vayda Website",
-      description: "Marketing site with Contenful integration.",
-      image: "/green-leaf.png",
-      technologies: ["Next.js", "TailwindCSS", "Contentful CMS", "GraphQL"],
-      accentColor: "bg-accent-green",
-      url: "https://www.vayda.com/",
-    },
+    // {
+    //   title: "Vayda Website",
+    //   description: "Marketing site with Contenful integration.",
+    //   image: "/green-leaf.png",
+    //   technologies: ["Next.js", "TailwindCSS", "Contentful CMS", "GraphQL"],
+    //   accentColor: "bg-accent-green",
+    //   url: "https://www.vayda.com/",
+    // },
     // {
     //   title: "COVID School Data Hub",
     //   description:
