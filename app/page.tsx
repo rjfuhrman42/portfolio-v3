@@ -83,6 +83,22 @@ export default async function Home() {
               A Software Engineer based in New York.
             </h1>
           </div>
+          <p className="border-b-2 pb-8 mb-8 border-accent-yellow">
+            <span className="text-accent-orange font-bold uppercase">
+              Heads up!
+            </span>{" "}
+            I&apos;m retiring this website soon.
+            <br></br>
+            Head on over to{" "}
+            <a
+              className="font-body animate-cycle-color"
+              href="https://portfolio-v4-a4i.pages.dev/"
+            >
+              my new site
+            </a>{" "}
+            for more up-to-date info!
+          </p>
+
           <p>
             I&apos;m Reid Fuhrman, a software engineer who specializes in
             front-end and mobile development.
@@ -105,7 +121,7 @@ export default async function Home() {
             (terrifying(fun)) streets of NYC.
             <br></br>
             <br></br>
-            PS: I also have a
+            PSST: I also have a
             <Link
               href="/blog"
               key="blog"
